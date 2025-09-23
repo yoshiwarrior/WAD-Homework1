@@ -1,0 +1,46 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+    background-color: #bfbfbf;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+nav > a {
+    display: inline-block;
+    padding: 12px;
+}
+
+nav > a:hover {
+    background: #8c8c8c;
+}
+
+main {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.post {
+    border-radius: 12px;
+    background-color: #d8d8d8;
+    padding: 4px;
+    margin: 12px 0;
+}
+
+.post > div:nth-child(1) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post > img:not(:nth-last-child(1)) {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+}
