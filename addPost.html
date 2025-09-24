@@ -7,5 +7,31 @@
         <link rel="stylesheet" href="assets/css/addPost.css" />
         <title>Add post</title>
     </head>
-    <body></body>
+    <body>
+        <header>
+            <nav>
+                <a href="/">Home</a>
+            </nav>
+            <div>
+                <img
+                    src="assets/img/user-avatar.png"
+                    width="48px"
+                    height="48px"
+                />
+            </div>
+        </header>
+        <main>
+            <form action="/index.html">
+                <div class="post_input">
+                    <label for="post_input">Post body</label>
+                    <textarea name="fbody" id="post_input" placeholder="textarea" required></textarea>
+                </div>
+                <div>
+                    <label for="file_input">Select file</label>
+                    <input name="ffile" type="file">
+                </div>
+                <input type="submit" class="submit_button" value="Create post">
+            </form>
+        </main>
+    </body>
 </html>
