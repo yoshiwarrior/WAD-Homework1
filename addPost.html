@@ -10,7 +10,8 @@
     <body>
         <header>
             <nav>
-                <a href="/">Home</a>
+                <a href=".">Home</a>
+                <a href="addPost.html">addPost</a>
             </nav>
             <div>
                 <img
@@ -24,13 +25,22 @@
             <form action="/index.html">
                 <div class="post_input">
                     <label for="post_input">Post body</label>
-                    <textarea name="fbody" id="post_input" placeholder="textarea" required></textarea>
+                    <textarea
+                        name="fbody"
+                        id="post_input"
+                        placeholder="textarea"
+                        required
+                    ></textarea>
                 </div>
                 <div class="post_input">
                     <label for="file_input">Select file</label>
-                    <input name="ffile" type="file">
+                    <input name="ffile" type="file" />
                 </div>
-                <input type="submit" class="submit_button" value="Create post">
+                <input
+                    type="submit"
+                    class="submit_button"
+                    value="Create post"
+                />
             </form>
         </main>
     </body>
