@@ -7,5 +7,32 @@
         <link rel="stylesheet" href="assets/css/login.css" />
         <title>Login</title>
     </head>
-    <body></body>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html">Home</a>
+            </nav>
+            <div>
+                <img
+                    src="assets/img/user-avatar.png"
+                    width="48px"
+                    height="48px"
+                />
+            </div>
+        </header>
+        <main>
+            <form action="index.html">
+                <div class="login">
+                    <label><b>Welcome to PostIt</b></label>
+                    <a href="/">Create an account</a>
+                    <label>or</label>
+                    <label>Please log in</label>
+                    <textarea name="femail" id="login_email" placeholder="Email" required></textarea>
+                    <textarea name="fpassword" id="login_password" placeholder="Password" required></textarea>
+                    <input type="submit" class="submit_button" value="Login">
+                    <a href="/">Forget password</a>
+                </div>
+            </form>
+        </main>
+    </body>
 </html>
