@@ -11,7 +11,6 @@
         <header>
             <nav>
                 <a href=".">Home</a>
-                <a href="addPost.html">addPost</a>
             </nav>
             <div>
                 <img
@@ -22,7 +21,7 @@
             </div>
         </header>
         <main>
-            <form action="/index.html">
+            <form action="index.html" method="post">
                 <div class="post_input">
                     <label for="post_input">Post body</label>
                     <textarea
@@ -38,7 +37,7 @@
                 </div>
                 <input
                     type="submit"
-                    class="submit_button"
+                    id="submit_button"
                     value="Create post"
                 />
             </form>
