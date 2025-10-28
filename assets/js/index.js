@@ -1,4 +1,4 @@
-fetch("/posts.json").then(async (res) => {
+fetch("posts.json").then(async (res) => {
     const json = await res.json();
     console.log(json);
     json.sort(
