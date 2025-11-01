@@ -1,55 +1,29 @@
-fetch("posts.json").then(async (res) => {
-    const json = await res.json();
-    console.log(json);
-    json.sort(
-        (a, b) => new Date(a.createdAt).getTime - new Date(b.createdAt).getTime
-    ).forEach((postJson) => {
-        createPost(postJson);
-    });
-});
+const avatar = document.getElementById("avatar");
+let isVisible = false;
 
-const createPost = ({ authorName, content, imageUrl, createdAt }) => {
-    const feed = document.getElementsByTagName("main")[0];
+let container = document.createElement("div");
+let username = document.createElement("p");
+let email = document.createElement("p");
+let logout = document.createElement("p");
 
-    const container = document.createElement("div");
-    container.className = "post";
+container.id = "usermenu"
 
-    const avatarContainer = document.createElement("div");
-    const avatarImage = document.createElement("img");
-    avatarImage.src = "assets/img/user-avatar.png";
-    avatarImage.width = 32;
-    avatarImage.height = 32;
+username.textContent = "Max Mustermann";
+email.textContent = "max.mustermann@ut.ee"
+logout.textContent = "Log out";
 
-    const postAuthorSpan = document.createElement("span");
-    postAuthorSpan.innerText = authorName;
+container.appendChild(username);
+container.appendChild(email);
+container.appendChild(logout);
 
-    const postedDateSpan = document.createElement("span");
-    const createdAtString = new Date(createdAt).toLocaleDateString();
-    postedDateSpan.innerText = createdAtString;
-
-    const postContentImage = document.createElement("img");
-    if (imageUrl) {
-        postContentImage.src = imageUrl;
+avatar.onclick = () => {
+    if (isVisible) {
+        document.body.removeChild(container);
+        isVisible = false;
+    }
+    else {
+        document.body.appendChild(container);
+        isVisible = true;
     }
 
-    const postContentParagraph = document.createElement("p");
-    postContentParagraph.innerText = content;
-
-    const likeImage = document.createElement("img");
-    likeImage.src = "assets/img/facebook-like.png";
-    likeImage.width = 32;
-    likeImage.height = 32;
-
-    container.appendChild(avatarContainer);
-    avatarContainer.appendChild(avatarImage);
-    avatarContainer.appendChild(postAuthorSpan);
-    avatarContainer.appendChild(postedDateSpan);
-    if (imageUrl) {
-        container.appendChild(postContentImage);
-    }
-    container.appendChild(postContentParagraph);
-    container.appendChild(likeImage);
-
-    // add post to feed
-    feed.appendChild(container);
-};
+} 
